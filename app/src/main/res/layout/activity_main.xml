@@ -1,0 +1,56 @@
+<!-- LinearLayoutをRelativeLayoutに変更 -->
+<!-- android:orientation="vertical"を追加 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+
+    android:orientation="vertical"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.marcys.memohistory.MainActivity">
+
+
+    <!-- 追加：ここから  -->
+    <!-- キャンバス -->
+    <!-- パッケージ名を含むクラス名で指定 今回の例だと"com.example.drawapp.CanvasView" -->
+
+    <!-- キャンバスクリア用ボタン -->
+
+    <com.marcys.memohistory.CanvasView
+        android:id="@+id/canvas_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <Button
+        android:id="@+id/clear_button"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignBottom="@id/canvas_view"
+        android:text="CLEAR"
+        />
+
+    <TextView android:id="@+id/text_view"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="lambda:"
+        android:layout_marginLeft="20dp"
+        />
+
+    <SeekBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/seekBar"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="#aaa"
+        android:minWidth="340dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:min="0"
+        android:max="100"
+        />
+
+    <!-- android:rotation="90-->
+
+</RelativeLayout>      <!-- LinearLayoutをRelativeLayoutに変更 -->
